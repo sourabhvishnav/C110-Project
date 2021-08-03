@@ -15,10 +15,13 @@ population_std_deviation = statistics.stdev(data)
 print("population mean ", population_mean)
 print("population std_deviation ", population_std_deviation)
 
+
 def show_fig(meanData):
     df = meanData
     sampling_mean = statistics.mean(meanData)
     sampling_std_deviation = statistics.stdev(meanData)
+    zScore = (sampling_mean - population_mean) / population_std_deviation
+    print("Z-score = ", zScore)
     print("Standard deviation of sampling distribution:- ", sampling_std_deviation)
     print("Mean of samling distribution is ", sampling_mean)
     fig = ff.create_distplot(
